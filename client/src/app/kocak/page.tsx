@@ -13,7 +13,7 @@ export default function Index(){
 
     const handleLogout = async () => {
         try {
-          const res = await fetch('http://localhost:5000/api/logout', {
+          const res = await fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/logout`, {
             method: 'POST',
             credentials: 'include'
           });
@@ -31,7 +31,7 @@ export default function Index(){
     };
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/kocak", {
+        fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/kocak`, {
             method: "GET",
             credentials: "include"
         }).then(

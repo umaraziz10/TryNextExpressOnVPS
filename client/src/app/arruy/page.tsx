@@ -8,7 +8,7 @@ export default function Index(){
     const[ arruy, setArruy ] = useState(["sabar ya dik"]);
 
     useEffect(() => {
-    fetch("http://localhost:5000/api/arruy", {
+    fetch(`${process.env.NEXT_PUBLIC_BASEURL}/api/arruy`, {
             method: "GET",
             credentials: "include"
         }).then(

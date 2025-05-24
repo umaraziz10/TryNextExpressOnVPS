@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -6,7 +7,7 @@ const authRoutes = require("./routes/auth");
 const PORT = 5000;
 
 app.use(cors({
-    origin : "http://localhost:3000",
+    origin : process.env.CLIENT_ORIGIN,
     credentials : true
 }));
 

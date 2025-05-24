@@ -8,7 +8,7 @@ export default function Home() {
   const [message, setMessage] = useState("walid");
 
   useEffect(()=>{
-    fetch("http://localhost:5000/").then(
+    fetch(`${process.env.NEXT_PUBLIC_BASEURL}/`).then(
       response => response.json()
     ).then(
       data => {
